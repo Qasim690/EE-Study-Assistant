@@ -251,7 +251,6 @@ export default function InteractiveQuiz() {
 
   if (step === 'quiz') {
     const currentQ = questions[currentIndex];
-    const isAnswered = userAnswers[currentIndex] !== undefined;
 
     return (
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 pt-4">
