@@ -46,8 +46,8 @@ export default function Dashboard() {
       {/* 1. Statistic Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {stats.map((stat, index) => (
-          <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center space-x-4">
-            <div className="p-3 bg-slate-50 rounded-lg">
+          <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex items-center space-x-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-300 cursor-default">
+            <div className="p-3 bg-slate-50 rounded-lg transition-transform duration-300 hover:scale-110 shadow-sm">
               <svg className={`w-6 h-6 ${stat.color || 'text-blue-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={stat.icon} />
               </svg>
@@ -66,14 +66,14 @@ export default function Dashboard() {
         <div className="lg:col-span-2 space-y-8">
           
           {/* 2. Quick Actions */}
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-md">
             <h2 className="text-xl font-bold text-slate-900 mb-4">Quick Actions</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {quickActions.map((action, index) => (
                 <Link
                   key={index}
                   to={action.path}
-                  className={`${action.color} text-white text-center px-4 py-3 rounded-xl font-medium transition-colors shadow-sm`}
+                  className={`${action.color} text-white text-center px-4 py-3 rounded-xl font-medium shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-500/30 active:scale-95`}
                 >
                   {action.name}
                 </Link>
@@ -82,12 +82,12 @@ export default function Dashboard() {
           </div>
 
           {/* 3. Recently Added Features */}
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+          <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-md">
             <h2 className="text-xl font-bold text-slate-900 mb-4">Recently Added Features</h2>
             <ul className="divide-y divide-slate-100">
               {recentFeatures.map((feature, index) => (
-                <li key={index} className="py-3 flex items-center space-x-3 text-slate-700">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                <li key={index} className="py-3 flex items-center space-x-3 text-slate-700 transition-all duration-300 hover:translate-x-2 hover:text-blue-600 cursor-default">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full transition-transform duration-300 hover:scale-150"></span>
                   <span>{feature}</span>
                 </li>
               ))}
@@ -98,16 +98,16 @@ export default function Dashboard() {
         {/* Right Column (Tips for Students) */}
         <div className="lg:col-span-1">
           {/* 4. Tips for Students Card */}
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 h-full">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 h-full transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10">
             <div className="flex items-center space-x-2 mb-4">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-blue-600 transition-transform duration-500 hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
               <h2 className="text-xl font-bold text-slate-900">Tips for Students</h2>
             </div>
             <ul className="space-y-4">
               {tips.map((tip, index) => (
-                <li key={index} className="flex items-start space-x-3 text-slate-700 bg-white/60 p-3 rounded-lg shadow-sm border border-blue-50/50">
+                <li key={index} className="flex items-start space-x-3 text-slate-700 bg-white/60 p-3 rounded-lg shadow-sm border border-blue-50/50 transition-all duration-300 hover:scale-[1.02] hover:bg-white hover:shadow-md cursor-default">
                   <svg className="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>

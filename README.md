@@ -27,11 +27,11 @@
 ## 4. AI-Powered Feature & System Prompt
 * **AI Feature:** Powered by the Gemini API via a smart model-discovery loop that fetches undergraduate-level technical multiple-choice questions along with detailed mathematical and conceptual explanations.
 * **System Prompt:**
-  > You are an expert Electrical Engineering professor. 
-  > Generate ONLY undergraduate-level Electrical Engineering MCQs.
-  > Topic: [Dynamic Topic]. Difficulty: [Easy/Medium/Hard]. Number of questions: [Count].
-  > Generate unique questions every time. Never repeat questions. Randomize option order.
-  > Return ONLY a valid JSON array. Do NOT include markdown formatting, backticks, or code blocks.
+  > You are an expert Electrical Engineering professor.  
+  > Generate ONLY undergraduate-level Electrical Engineering MCQs.  
+  > Topic: [Dynamic Topic]. Difficulty: [Easy/Medium/Hard]. Number of questions: [Count].  
+  > Generate unique questions every time. Never repeat questions. Randomize option order.  
+  > Return ONLY a valid JSON array. Do NOT include markdown formatting, backticks, or code blocks.  
   > Format strictly as an array of objects containing question, options, correctAnswer index, explanation, and concept tag.
 
 ## 5. Tools, Services, & Tech Stack
@@ -58,4 +58,16 @@ To run this project on your local machine, follow these steps:
 1. **Clone the Repository:**
    ```bash
    git clone [https://github.com/Qasim690/EE-Study-Assistant.git](https://github.com/Qasim690/EE-Study-Assistant.git)
-   cd EE-Study-Assistant
+Navigate into the Project Directory:
+
+Bash
+cd EE-Study-Assistant
+Install Dependencies:
+
+Bash
+npm install
+Run the Development Server:
+
+Bash
+npm run dev
+Open the local development link provided in your terminal (e.g., http://localhost:5173) in your web browser.

@@ -1,10 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AiHub from './pages/AiHub'; // We import the new Hub
+
+// Components
 import Layout from './components/Layout/Layout';
+
+// Pages
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Calculators from './pages/Calculators';
 import FormulaLibrary from './pages/FormulaLibrary';
+import AiHub from './pages/AiHub';
+import AiQuiz from './pages/AiQuiz';
+import AiAssistant from './pages/AiAssistant';
 import About from './pages/About';
 
 function App() {
@@ -17,11 +23,10 @@ function App() {
           <Route path="calculators" element={<Calculators />} />
           <Route path="formulas" element={<FormulaLibrary />} />
           
-          {/* 
-            Now, clicking your existing navbar button (/ai) 
-            loads the side-by-side view of both tools! 
-          */}
+          {/* AI Features */}
           <Route path="ai" element={<AiHub />} />
+          <Route path="ai-quiz" element={<AiQuiz />} />
+          <Route path="ai-assistant" element={<AiAssistant />} />
           
           <Route path="about" element={<About />} />
         </Route>
